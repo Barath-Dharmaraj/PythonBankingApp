@@ -19,6 +19,15 @@ class BankAccount:
             print(f"Deposited ${amount}. New balance: ${self.balance}")
         else:
             print("Invalid amount!")
+            
+    def add_interest(self, rate):
+        if rate > 0:
+            interest = self.balance * (rate / 100)
+            self.balance += interest
+            print(f"Interest of ${interest:.2f} added at rate {rate}%. New balance: ${self.balance:.2f}")
+        else:
+            print("Invalid interest rate!")
+
 
     def withdraw(self, amount):
         if 0 < amount <= self.balance:
