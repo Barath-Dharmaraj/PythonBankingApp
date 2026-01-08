@@ -3,6 +3,15 @@ class BankAccount:
     def __init__(self, account_holder, balance=0):
         self.account_holder = account_holder
         self.balance = balance
+    #New Feature
+    def transfer(self, target_account, amount):
+        if 0 < amount <= self.balance:
+            self.balance -= amount
+            target_account.balance += amount
+            print(f"Transferred ${amount} to {target_account.account_holder}")
+            print(f"Your new balance: ${self.balance}")
+        else:
+            print("Insufficient funds or invalid amount!")
 
     def deposit(self, amount):
         if amount > 0:
