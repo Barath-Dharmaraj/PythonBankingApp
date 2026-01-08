@@ -47,7 +47,7 @@ def main():
 
     while True:
         print("\n--- Menu ---")
-        print("1. Deposit")
+        print("1. Deposit money")
         print("2. Withdraw")
         print("3. Check Balance")
         print("4. Transfer to Friend")
